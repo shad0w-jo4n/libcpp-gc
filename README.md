@@ -15,8 +15,10 @@ Header-Only Very Simple Garbage Collector Library for C++
 #include "GarbageCollector.h"
 
 int main() {
+    // You can change interval of garbage collector working
     GarbageCollector::gcInterval = 5s;
 
+    // Start garbage collection
     return GarbageCollector::runtime([]() {
         auto example = gc(new Example());
 
